@@ -1,0 +1,18 @@
+/* components/Layout.module.css */
+
+.layout {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mainContent {
+    display: flex;
+    margin-top: 60px; /* Space for navbar */
+  }
+  
+  .pageContent {
+    margin-left: 220px; /* Space for sidebar */
+    padding: 20px;
+    flex: 1;
+  }
+  

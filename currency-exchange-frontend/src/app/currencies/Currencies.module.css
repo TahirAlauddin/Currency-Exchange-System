@@ -1,0 +1,24 @@
+/* pages/currencies/Currencies.module.css */
+
+.container {
+  padding: 20px;
+}
+
+.currencyList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.currencyList li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.currencyList li a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.currencyList li a:hover {
+  text-decoration: underline;
+}

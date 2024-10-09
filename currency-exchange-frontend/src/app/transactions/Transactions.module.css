@@ -1,0 +1,32 @@
+/* pages/transactions/Transactions.module.css */
+
+.container {
+    padding: 20px;
+  }
+  
+  .transactionList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .transactionList li {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .transactionList li a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .transactionList li a:hover {
+    text-decoration: underline;
+  }
+  
+  .timestamp {
+    display: block;
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-top: 4px;
+  }
+  
