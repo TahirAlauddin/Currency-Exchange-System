@@ -83,6 +83,13 @@ const Dashboard: React.FC = () => {
             </li>
           ))}
           
+        
+        </ul>
+      </section>
+
+      <section>
+        <h2>Currencies</h2>
+        <ul>
         {currencies.map((currency) => (
           <li key={currency.id}>
             <Link href={`/currencies/${currency.id}`}>
@@ -90,17 +97,6 @@ const Dashboard: React.FC = () => {
             </Link> - Exchange Rate: {currency.exchange_rate}
           </li>
         ))}
-        </ul>
-      </section>
-
-      <section>
-        <h2>Currencies</h2>
-        <ul>
-          {currencies.map((currency) => (
-            <li key={currency.id}>
-              {currency.name} ({currency.symbol}) - Exchange Rate: {currency.exchange_rate}
-            </li>
-          ))}
         </ul>
       </section>
     </div>
