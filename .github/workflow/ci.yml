@@ -1,0 +1,65 @@
+# .github/workflows/ci.yml
+
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - development
+  pull_request:
+    branches:
+      - main
+      - development
+
+jobs:
+  test-backend:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:latest
+        env:
+          POSTGRES_USER: admin
+          POSTGRES_PASSWORD: admin123
+          POSTGRES_DB: currency_exchange
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U admin -d currency_exchange"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+    - name: Install dependencies
+      run: |
+        pip install -r backend/requirements.txt
+    - name: Run backend tests
+      env:
+        DATABASE_URL: postgres://admin:admin123@localhost:5432/currency_exchange
+      run: |
+        python backend/manage.py migrate
+        python backend/manage.py test transactions
+
+  test-frontend:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+    - name: Install dependencies
+      run: |
+        cd frontend
+        npm install
+    - name: Run frontend tests
+      run: |
+        cd frontend
+        npm test
