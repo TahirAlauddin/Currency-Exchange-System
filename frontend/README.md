@@ -15,7 +15,7 @@ This is the frontend for the Currency Exchange System, built with Next.js and Ty
 ## Getting Started
 1. **Clone the repository** and navigate to the frontend directory:
    ```bash
-   cd currency-exchange-system/currency-exchange-frontend
+   cd currency-exchange-system/frontend
    ```
 2. **Install dependencies**:
    ```bash
