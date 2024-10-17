@@ -9,8 +9,8 @@ The Currency Exchange System is a full-stack application for managing currency e
 - **Database**: PostgreSQL (Dockerized)
 
 ### Directory Structure
-- `/currency-exchange-api`: Contains the Django backend code for the API
-- `/currency-exchange-frontend`: Contains the Next.js frontend code for the user interface
+- `/backend`: Contains the Django backend code for the API
+- `/frontend`: Contains the Next.js frontend code for the user interface
 
 ### Getting Started
 1. Clone this repository:
@@ -18,7 +18,7 @@ The Currency Exchange System is a full-stack application for managing currency e
    git clone https://github.com/TahirAlauddin/Currency-Exchange-System.git
    ```
 
-2. Follow the setup instructions in each folder's README (`/currency-exchange-api` and `/currency-exchange-frontend`) to start the backend and frontend services.
+2. Follow the setup instructions in each folder's README (`/backend` and `/frontend`) to start the backend and frontend services.
 
 ### License
 This project is licensed under the MIT License.

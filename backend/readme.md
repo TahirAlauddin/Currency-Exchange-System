@@ -17,7 +17,7 @@ This is the backend API for the Currency Exchange System, built with Django and 
 ### Setup
 1. **Clone the repository** and navigate to the backend directory:
    ```bash
-   cd currency-exchange-system/currency-exchange-api
+   cd currency-exchange-system/backend
    ```
 2. **Create a virtual environment** and install dependencies:
    ```bash
